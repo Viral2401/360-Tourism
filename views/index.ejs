@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Three Js Template</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="importmap">
+            {
+                "imports":{
+                    "three": "./build/three.module.js",
+                    "three/examples/controls/OrbitControls": "./jsm/controls/OrbitControls.js"
+                }
+            }
+        </script>
+</head>
+
+<body>
+
+    <!-- <div class="loader">
+
+        <div class="counter">0</div>
+
+    </div> -->
+    <canvas class="webgl"></canvas>
+    <div id="list"></div>
+
+
+    <nav id="navbar">
+
+        <a href="http://localhost:3000/" class="logo">phptravels</a>
+        <!-- <input type="search" name="search" id="search" placeholder="ENTER THE NAME OF THE PLACES , CITY , COUNTRY"> -->
+        <!-- <button id="search_btn">search</button> -->
+
+        <!-- <p id="demo" style="color: white;">Fetch a file to change this text.</p> -->
+
+
+
+        <!-- <button class="button_login">Login</button> -->
+
+
+
+
+
+        <ul>
+
+            <li> <a href="#home">home</a> </li>
+            <li> <a href="#about">tours</a> </li>
+            <!-- <li> <a href="https://phptravels.net" rel="noopener">book your tours</a> </li> -->
+            <li> <a href="http://localhost/phptravels/" rel="noopener">book your tours</a> </li>
+
+            <!-- <li> <a href="#services">about</a> </li>
+            <li> <a href="#contact">contact</a> </li> -->
+
+        </ul>
+
+    </nav>
+
+
+    <section class="container" id="home">
+
+
+
+        <div class="content">
+
+            <!-- <a href="https://phptravels.net" rel="noopener">Tour</a> -->
+
+
+            <h1 class="first-h1">I WOULD LIKE TO TRAVEL THERE</h1>
+            <!-- <h1 class="second-h1">amazing and live</h1> -->
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="heading-about">TOURS</div>
+
+
+        <div id="map_360">
+
+            <div class="close360">x</div>
+            <div class="showmap_360"></div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div id="map">
+
+            <div class="close_googlebtn">x</div>
+            <div class="showmap"></div>
+
+        </div>
+
+        <div id="whether">
+
+            <div class="close_whetherbtn">x</div>
+            <div class="showwhether"></div>
+
+        </div>
+
+
+
+        <div id="user_distance">
+
+            <div class="close_distancebtn">x</div>
+
+            <div class="locateioncontent">
+
+                <div>
+
+                    CITY : <span class="locationplace1"></span>
+                </div>
+                <br>
+
+
+                <div>
+
+                    STATE : <span class="locationplace2"></span>
+                </div>
+                <br>
+
+
+                <div>
+
+                    COUNTRY : <span class="locationplace3"></span>
+                </div>
+                <br>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="image-menu">
+
+            <div class="close">x</div>
+            <!-- <div class="imgheading">tajmahal</div> -->
+            <!-- <img alt="tajmahal" id="img"> -->
+            <div class="image-details">
+
+                <h2>HISTORY OF <span id="history_heading"></span></h2>
+                <p id="history">
+
+                </p>
+
+                <button id="btn-360">360 VIEW</button>
+                <a id="btn-placedetails" class="tour_link">PLANE YOUR TOUR</a>
+                <button id="btn-googlemap">show location</button>
+                <!-- <button id="btn-whether">show whether</button> -->
+                <button id="btn-distance">user location</button>
+                <div class="pop">please login</div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="content">
+
+
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="paris" id="img">
+                    <div class="imgheading">dubai</div>
+                    <button id="btn-about">EXPLORE</button>
+
+                </div>
+            </div>
+
+
+
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="Arc de Triomphe" id="img">
+                    <div class="imgheading">oman</div>
+                    <button id="btn-about">EXPLORE</button>
+                    <!-- <img src="/static/tajmahal.jpg"> -->
+
+                </div>
+            </div>
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="Le mont saint michel" id="img">
+                    <div class="imgheading">hurghada</div>
+                    <button id="btn-about">EXPLORE</button>
+                    <!-- <img src="/static/tajmahal.jpg"> -->
+
+                </div>
+            </div>
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="Museum de louvre" id="img">
+                    <div class="imgheading" style="color: white;">hong kong</div>
+                    <button id="btn-about">EXPLORE</button>
+                    <!-- <img src="/static/tajmahal.jpg"> -->
+
+                </div>
+            </div>
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="tajmahal" id="img">
+                    <div class="imgheading">thailand</div>
+                    <button id="btn-about">EXPLORE</button>
+                    <img src="/static/tajmahal.jpg">
+
+                </div>
+            </div>
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="tajmahal" id="img">
+                    <div class="imgheading">sydney</div>
+                    <button id="btn-about">EXPLORE</button>
+                    <img src="/static//static/tajmahal.jpg">
+
+                </div>
+            </div>
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="tajmahal" id="img">
+                    <div class="imgheading">tajmahal</div>
+
+                    <button id="btn-about">EXPLORE</button>
+
+                    <img src="/static/tajmahal.jpg">
+
+                </div>
+            </div>
+
+            <div class="imagesplaces">
+
+
+                <div class="image1">
+
+                    <img alt="tajmahal" id="img">
+                    <div class="imgheading">malesiya</div>
+                    <button id="btn-about">EXPLORE</button>
+
+                    <img src="/static/tajmahal.jpg">
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <section id="videosection">
+
+        <h1>phptravel</h1>
+
+        <div class="video1">
+
+            <video src="/videos/tour.mp4" autoplay muted loop></video>
+
+
+        </div>
+
+        <!-- <div class="video2">
+
+            <video src="/videos/tour2.mp4" autoplay muted loop></video>
+
+
+        </div> -->
+
+
+    </section>
+
+    <!-- <section id="services">
+
+        <div class="heading-about">about</div>
+
+        <div class="planeyourtour_btn_content">
+
+            <h2>ABOUT OUR WEBSITE</h2>
+            <p>3d Tourism our website is about a 3d place it shows you a Place in 3D and give you a perfect view that
+                hoe that particular place looks like you can enjoy that view from home.
+
+            </p>
+
+
+        </div>
+
+    </section> -->
+
+    <!-- <section id="contact">
+
+
+        <div class="heading-contact">contact</div>
+
+
+        <form id="form1" action="/" method="post"> -->
+
+    <!-- <input type="text" name="ENTER YOUR NAME" id="name" placeholder="ENTER YOUR NAME">
+    <input type="text" name="ENTER YOUR EMAIL" id="email" placeholder="ENTER YOUR EMAIL">
+    <input type="text" name="ENTER YOUR MOBILE" id="mobile" placeholder="ENTER YOUR MOBILE"> -->
+    <!-- <textarea name="whatweshouldimproveinourwebsites" id="address" cols="30" rows="10" autocomplete="off"
+        placeholder="WHAT WE SHOULD IMPROVE IN OUR WEBSITES" required></textarea>
+    <input type="submit" value="submit" id="form"> -->
+
+
+    <!-- </form>
+
+    </section>  -->
+
+    <footer id="footer">
+
+        <div class="foot">
+            <p>
+
+                @copyrights 3D TOUR OVERVIEW <span></span> | -----------
+
+            </p>
+        </div>
+
+
+    </footer>
+
+    <script>
+
+        function toggleForm() {
+
+            var container1 = document.querySelector('.container1');
+            container1.classList.toggle('active');
+
+
+        }
+
+    </script>
+
+    <script type="module" src="/client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly" async></script> -->
+
+</body>
+
+</html>
